@@ -1,0 +1,14 @@
+# Para inciar el entorno virtual
+
+venvERP\Scripts\activate
+
+# Para inicar el proyecto
+
+ python manage.py runserver  
+
+# En caso de que no les deje ejecutar el venv ejecutar el siguiente comando en powershell como administrador y le dan que si 
+
+Set-ExecutionPolicy RemoteSigned
+
+# Secret key django
+https://djecrety.ir/
