@@ -6,11 +6,17 @@ section {
   position: fixed;
   top: 1px;
   width: 50vw;
-  margin: 20px 30vw;
+  margin: 10vw 30vw;
 }
 
-
+.form-label {
+  color: white;
+}
 
 .content {
   
 }
+.row {
+  align-items: center!important;
+}
+  
