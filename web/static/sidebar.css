@@ -8,6 +8,18 @@
     border-radius: 5px;
     align-items: center;
   }
+
+ /* Diseño responsivo de el contenedor principal */
+
+ @media screen and (width < 821px){
+  .input {
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+  }
+ }
     
   .value {
     width: 100%;
@@ -20,7 +32,7 @@
     gap: 5px;
     cursor: pointer;
     border-radius: 4px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   

@@ -2,21 +2,61 @@ body {
   background: linear-gradient(#051f30, #000000);
 }
 
+/* section {
+  position: fixed;
+  top: 1px;
+  width: 100%;
+  background-color: red;
+} */
 section {
   position: fixed;
   top: 1px;
-  width: 50vw;
-  margin: 10vw 30vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.form-label {
-  color: white;
+/* Activar para configurar el formulario nuevo */
+form {
+  margin: 0 auto;
+  display:block;
+  width: 420px;
+  padding-bottom:2em;
+  border-radius:0.5em;
 }
 
-.content {
-  
+fieldset {
+  display: inline;
 }
-.row {
-  align-items: center!important;
+
+label {
+  color:white;
+  display:block;
+  width:100%;
 }
-  
+
+
+
+.form-control {
+  width: 100%;
+  font-size:16px;
+  border:none;
+}
+
+select, textarea  {
+  display:inline-block;
+  width: 100%;
+  margin: 10px auto;
+  font-size:16px;
+  border:none;
+}
+
+#textarea {
+  border-radius: 0.5em;
+}
+#submit {
+  display: block;
+  margin: 0 auto;
+}
