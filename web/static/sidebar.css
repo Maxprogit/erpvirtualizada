@@ -19,8 +19,8 @@
     background-color: transparent;
     flex-direction: row;
   }
+  
  }
-    
   .value {
     width: 100%;
     background-color: transparent;
@@ -30,10 +30,31 @@
     display: flex;
     position: relative;
     gap: 5px;
-    cursor: pointer;
     border-radius: 4px;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: -380px;
+  }
+
+  /* Diseño responsivo de los botones */
+  @media screen and (width < 821px) {
+    .value {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      padding: 10px;
+      color: white;
+      display: flex;
+      position: relative;
+      gap: 5px;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    span {
+      display: none;
+    }
   }
   
   .value:not(:active):hover,
