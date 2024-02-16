@@ -15,11 +15,14 @@
 }
 
 span {
-  opacity: 0;
+  /* opacity: 0; */
+  display: block;
+  color: red;
 }
 
 span:hover {
-  opacity: 1;
+  color: white;
+  /* opacity: 1; */
 }
 
 /* Diseño responsivo del contenedor principal */
@@ -95,8 +98,8 @@ span:hover {
     align-items: center;
     flex-direction: row;
   }
-  span:hover {
-   display: none;
+  span {
+    display: none;
   }
 }
 
