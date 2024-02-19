@@ -5,24 +5,24 @@
   height: 100vh;
   background-color: #0D1117;
   justify-content: space-evenly;
-  border-radius: 5px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   align-items: center;
 }
 
-.input:hover {
+.input:hover, .input:focus-within {
   transition: all 0.5s ease-out;
   width: 200px;
 }
 
 span {
-  /* opacity: 0; */
-  display: block;
-  color: red;
+  display: none;
 }
-
-span:hover {
+/* activamos el span y le damos un focus para que el inputo no reduzca su tamañno mientras tenga una opcion selecionada */
+.value:hover span, .value:focus-within span{
+  display: block;
   color: white;
-  /* opacity: 1; */
+  cursor: pointer;
 }
 
 /* Diseño responsivo del contenedor principal */
@@ -43,17 +43,18 @@ span:hover {
 
 .value {
   width: 100%;
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  color: white;
-  display: flex;
-  position: relative;
-  gap: 5px;
-  border-radius: 4px;
-  margin-top: -380px;
-  align-items: center;
-  flex-direction: column; /* Esto se elimina en el hover */
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: white;
+    display: inline-flex;
+    position: relative;
+    /* gap: 5px; */
+    border-radius: 4px;
+    margin-top: -380px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .value:hover {
@@ -68,6 +69,7 @@ span:hover {
   margin-top: -380px;
   flex-direction: row;
   justify-content: center;
+  cursor: pointer;
 }
 
 /* Diseño responsivo de los botones */
@@ -84,6 +86,7 @@ span:hover {
     align-items: center;
     justify-content: center;
     margin-top: 1px;
+    cursor: pointer;
   }
   .value:hover {
     width: 100%;
@@ -97,6 +100,7 @@ span:hover {
     margin-top: -380px;
     align-items: center;
     flex-direction: row;
+    cursor: pointer;
   }
   span {
     display: none;
