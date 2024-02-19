@@ -1,7 +1,7 @@
 .input {
   display: flex;
   flex-direction: column;
-  width: 100px; /* Cambiamos el tamaño a 200px en el hover */
+  width: 200px; /* Cambiamos el tamaño a 200px en el hover */
   height: 100vh;
   background-color: #0D1117;
   justify-content: space-evenly;
@@ -10,14 +10,14 @@
   align-items: center;
 }
 
-.input:hover, .input:focus-within {
+/* .input:hover, .input:focus-within {
   transition: all 0.5s ease-out;
   width: 200px;
-}
+} */
 
-span {
+/* span {
   display: none;
-}
+} */
 /* activamos el span y le damos un focus para que el inputo no reduzca su tamañno mientras tenga una opcion selecionada */
 .value:hover span, .value:focus-within span{
   display: block;
@@ -55,6 +55,10 @@ span {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.value span {
+  color: #ffffff;
 }
 
 .value:hover {
