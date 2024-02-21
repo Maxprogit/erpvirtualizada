@@ -19,26 +19,30 @@
   display: none;
 } */
 /* activamos el span y le damos un focus para que el inputo no reduzca su tamañno mientras tenga una opcion selecionada */
-.value:hover span, .value:focus-within span{
+/* .value:hover span, .value:focus-within span{
   display: block;
   color: white;
   cursor: pointer;
-}
+} */
 
 /* Diseño responsivo del contenedor principal */
-@media screen and (max-width: 820px) {
+@media screen and (max-width:  820px) {
   .input {
     width: auto;
     height: auto;
-    background-color: transparent;
     flex-direction: row;
+    border-radius: 0;
   }
-  .input:hover {
+  /* .input:hover {
     width: auto;
     height: auto;
     background-color: transparent;
     flex-direction: row;
-  }
+  } */
+}
+
+span {
+  margin: 0 auto;
 }
 
 .value {
@@ -49,19 +53,22 @@
     color: white;
     display: inline-flex;
     position: relative;
-    /* gap: 5px; */
+    gap: 5px;
     border-radius: 4px;
     margin-top: -380px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: solid 2px transparent;
+  
+    border-bottom-color: #28212c41;
 }
 
-.value span {
+/* .value span {
   color: #ffffff;
-}
+} */
 
-.value:hover {
+/* .value:hover {
   width: 100%;
   border: none;
   padding: 10px;
@@ -74,7 +81,7 @@
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
-}
+} */
 
 /* Diseño responsivo de los botones */
 @media screen and (max-width: 820px) {
@@ -91,8 +98,14 @@
     justify-content: center;
     margin-top: 1px;
     cursor: pointer;
+    border: solid 5px transparent;
+    border-right-color: #21262C;
   }
-  .value:hover {
+  .value:last-of-type {
+    border: solid 5px transparent;
+    border-right-color: none;
+  }
+  /* .value:hover {
     width: 100%;
     border: none;
     padding: 10px;
@@ -105,7 +118,7 @@
     align-items: center;
     flex-direction: row;
     cursor: pointer;
-  }
+  } */
   span {
     display: none;
   }
@@ -137,8 +150,4 @@
 .value:focus::before,
 .value:active::before {
   opacity: 1;
-}
-
-.value svg {
-  width: 15px;
 }
