@@ -1,4 +1,6 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- Toastify -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -41,7 +43,7 @@
       
                    
       
-                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                  <button onclick="validateData();" class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
                 </form>
                    
                   </div>
@@ -57,8 +59,45 @@
           </div>
         </div>
       </section>
-  
 
+      <script>
+        const user = document.getElementById('username')
+        const pass = document.getElementById('password')
+
+        // Crear un condicional para identificar si alguno de los campos esta correctamente
+        function validateData() {
+          if (user.value === '') {
+            Toastify({
+              text: 'El campo de usuario esta vacio',
+              duartion: 1500,
+              style: {
+                background: "linear-gradient(red, red)"
+              }
+            }).showToast();
+          } 
+          else if(pass.value === '') {
+            Toastify({
+              text: 'Debes ingresar tu contraseña',
+              duartion: 1500,
+              style: {
+                background: "linear-gradient(red, red)"
+              }
+            }).showToast();
+          } else {
+            Toastify({
+              text: 'Bienvenido',
+              duartion: 1500,
+              style: {
+                background: "linear-gradient(green, green)"
+              }
+            }).showToast();
+          }
+        }
+        // de ser asi permitir acceso en el login, sino enviar un mensaje toastify
+      </script>
+  
+      <!-- Toastify -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
       {% endblock %}
 </body>
 </html>
